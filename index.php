@@ -1,6 +1,11 @@
 <?php
 echo "Curiosity rover last images!";
 
+
+
+#$update=file_get_contents("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=".$year."-".$month."-".$day."&api_key=DEMO_KEY");
+$update=file_get_contents("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2016-10-19&api_key=DEMO_KEY");
+
 $date=getdate();
 $month=$date[mon];
 $day=$date[mday];
@@ -9,10 +14,6 @@ $year=$date[year];
 echo "<p>day ".$day."</pp>";
 echo "<p>month ".$month."</pp>";
 echo "<p>year ".$year."</pp>";
-
-#$update=file_get_contents("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=".$year."-".$month."-".$day."&api_key=DEMO_KEY");
-$update=file_get_contents("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2016-10-19&api_key=DEMO_KEY");
-
 
 $update=json_decode($update, TRUE);
 $camera=$update["photos"]["camera"]["name"];
