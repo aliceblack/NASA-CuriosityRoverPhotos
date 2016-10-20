@@ -38,4 +38,13 @@ echo "<p>dimensioni array ".$dime."</pp>";
 
 $m=reset($update);
 echo "<p>m ".$m."</pp>";
+
+print_r($update);
+var_dump($update);
+var_export($update);
+
+foreach($update as $error) 
+   echo $error . '<br/>';
+
+array_map('echo', $update);
 ?>
