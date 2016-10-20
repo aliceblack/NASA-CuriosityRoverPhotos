@@ -33,4 +33,7 @@ echo "<p>id1 ".$id1."</pp>";
 echo "<p>id2 ".$id2."</pp>";
 echo "<p>id3 ".$id3."</pp>";
 echo "<p>id4 ".$id4."</pp>";
+
+echo "<p>3 ".$update["photos"]["camera"]["id"]."</pp>";
+echo "<p>0 ".$update[0]."</pp>";
 ?>
