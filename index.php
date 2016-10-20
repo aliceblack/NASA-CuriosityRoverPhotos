@@ -36,5 +36,5 @@ function count_dimension($Array, $count = 0) {
 $dime=count_dimension($update);
 echo "<p>dimensioni array ".$dime."</pp>";
 
-echo "<p>".$update[0][0][0]."</pp>";
+echo reset($update);
 ?>
