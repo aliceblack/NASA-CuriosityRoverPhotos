@@ -2,8 +2,8 @@
 echo "Curiosity rover last images!";
 
 $date=getdate();
-$day=$date[mon];
-$month=$date[mday];
+$month=$date[mon];
+$day=$date[mday];
 $year=$date[year];
 
 echo "<p>day ".$day."</pp>";
