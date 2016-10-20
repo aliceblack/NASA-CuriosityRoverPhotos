@@ -25,14 +25,14 @@ if (empty($update)) {
   echo "<p>vuoto!</pp>";
 }
 
-function count_dimension($update, $count = 0) {
-   if(is_array($update)) {
-      return count_dimension(current($update), ++$count);
+function count_dimension($Array, $count = 0) {
+   if(is_array($Array)) {
+      return count_dimension(current($Array), ++$count);
    } else {
       return $count;
    }
 }
 
-$dime=count_dimension($a);
+$dime=count_dimension($update);
 echo "<p>".$dime."</pp>";
 ?>
