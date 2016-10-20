@@ -1,8 +1,5 @@
 <?php
 echo "Curiosity rover last images!";
-
-
-
 #$update=file_get_contents("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=".$year."-".$month."-".$day."&api_key=DEMO_KEY");
 $update=file_get_contents("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2016-10-19&api_key=DEMO_KEY");
 $update=json_decode($update, TRUE);
@@ -24,7 +21,18 @@ echo "<p>".$camera."</pp>";
 echo "<p>".$full_camera."</pp>";
 echo '<img src="'.$url.'" alt="curiosity image">';
 
-if (!empty($update)) {
+if (empty($update)) {
   echo "<p>vuoto!</pp>";
 }
+
+function count_dimension($update, $count = 0) {
+   if(is_array($update)) {
+      return count_dimension(current($update), ++$count);
+   } else {
+      return $count;
+   }
+}
+
+$dime=count_dimension($a);
+echo "<p>".$dime."</pp>";
 ?>
