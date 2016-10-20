@@ -12,7 +12,7 @@ $update=file_get_contents("https://api.nasa.gov/mars-photos/api/v1/rovers/curios
 
 $update=json_decode($update, TRUE);
 $camera=$update["photos"]["camera"]["name"];
-$full_camera=$update["photos"]["full_name"];
+$full_camera=$update["photos"]["camera"]["full_name"];
 $url=$update["photos"]["img_src"];
 
 
