@@ -15,14 +15,16 @@ echo "<p>year ".$year."</pp>";
 
 $id=$update["photos"]["0"]["id"];
 $id2=$update["photos"][0]["id"];
-$url=$update["photos"]["img_src"];
+$full_name=$update["photos"]["0"]["id"]["camera"]["full_name"]
+$url=$update["photos"]["0"]["id"]["camera"]["img_src"];
 
 echo "<p>id = ".$id."</pp>";
-echo "<p>id2 = ".$id2."</pp>";
+echo "<p>id = ".$id2."</pp>";
+echo "<p>Camera = ".$full_name."</pp>";
 echo '<img src="'.$url.'" alt="curiosity image">';
 
 if (empty($update)) {
-  echo "<p>vuoto!</pp>";
+  echo "<p>Array vuoto! Giornata libera per Curiosity!</pp>";
 }
 
 function count_dimension($Array, $count = 0) {
