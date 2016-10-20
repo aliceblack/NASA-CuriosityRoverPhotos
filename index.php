@@ -13,12 +13,12 @@ echo "<p>day ".$day."</pp>";
 echo "<p>month ".$month."</pp>";
 echo "<p>year ".$year."</pp>";
 
-$camera=$update["photos"]["camera"]["name"];
-$full_camera=$update["photos"]["camera"]["full_name"];
+$id=$update["photos"]["0"]["id"];
+$id2=$update["photos"][0]["id];
 $url=$update["photos"]["img_src"];
 
-echo "<p>".$camera."</pp>";
-echo "<p>".$full_camera."</pp>";
+echo "<p>id = ".$id."</pp>";
+echo "<p>id2 = ".$id2."</pp>";
 echo '<img src="'.$url.'" alt="curiosity image">';
 
 if (empty($update)) {
@@ -36,15 +36,12 @@ function count_dimension($Array, $count = 0) {
 $dime=count_dimension($update);
 echo "<p>dimensioni array ".$dime."</pp>";
 
-$m=reset($update);
-echo "<p>m ".$m."</pp>";
-
 print_r($update);
-var_dump($update);
-var_export($update);
+#var_dump($update);
+#var_export($update);
 
-foreach($update as $error) 
-   echo $error . '<br/>';
+#foreach($update as $error) 
+#   echo $error . '<br/>';
 
-array_map('echo', $update);
+#array_map('echo', $update);
 ?>
