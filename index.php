@@ -16,7 +16,7 @@ echo "<p>year ".$year."</pp>";
 $id=$update["photos"]["0"]["id"];
 $id2=$update["photos"][0]["id"];
 $full_name=$update["photos"]["0"]["camera"]["full_name"]
-$url=$update["photos"]["0"]["camera"]["img_src"];
+$url=$update["photos"]["0"]["img_src"];
 
 echo "<p>id = ".$id."</pp>";
 echo "<p>id = ".$id2."</pp>";
