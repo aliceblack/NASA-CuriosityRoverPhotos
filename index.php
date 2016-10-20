@@ -36,4 +36,8 @@ echo "<p>id4 ".$id4."</pp>";
 
 echo "<p>3 ".$update["photos"]["camera"]["id"]."</pp>";
 echo "<p>0 ".$update[0].$update[1].$update[2].$update[photos][camera][id]."</pp>";
+
+if (!empty($update)) {
+  echo "<p>vuoto!</pp>";
+}
 ?>
