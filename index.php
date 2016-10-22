@@ -1,5 +1,5 @@
 <?php
-echo "Curiosity rover yesterday images!";
+echo "Curiosity rover yesterday's Photos!";
 
 $date=getdate();
 $month=$date[mon];
@@ -12,7 +12,7 @@ if($month==11|$month==4|$month==6|$month==9)
 {
   if($day==1)
   {
-    $y=31;
+    $y=30;
   }
 }
 else if($month==2)
@@ -35,7 +35,7 @@ $update=file_get_contents("https://api.nasa.gov/mars-photos/api/v1/rovers/curios
 $update=json_decode($update, TRUE);
 
 echo "<p>Photos taken on: </pp>";
-echo "<p>day ".$day."</pp>";
+echo "<p>day ".$y."</pp>";
 echo "<p>month ".$month."</pp>";
 echo "<p>year ".$year."</pp>";
 
@@ -50,7 +50,7 @@ echo "<p>id = ".$id2."</pp>";
 echo '<img src="'.$url.'" alt="curiosity image">';
 
 if (empty($update)) {
-  echo "<p>Array vuoto! Giornata libera per Curiosity!</pp>";
+  echo "<p>Empty Array! Curiosity took a day off!</pp>";
 }
 
 function count_dimension($Array, $count = 0) {
