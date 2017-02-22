@@ -41,12 +41,13 @@ echo "<p>year ".$year."</pp>";
 
 $id=$update["photos"]["0"]["id"];
 $id2=$update["photos"][0]["id"];
-//$name=$update["photos"]["0"]["camera"]["name"]
+//$name=$update["photos"]["0"]["camera"]["name"];
+$name=$update["photos"]["0"]["camera"]["0"]["name"];
 $url=$update["photos"]["0"]["img_src"];
 
 echo "<p>id = ".$id."</pp>";
 echo "<p>id = ".$id2."</pp>";
-//echo "<p>Camera = ".$name."</pp>";
+echo "<p>Camera = ".$name."</pp>"; //camera name
 echo '<img src="'.$url.'" alt="curiosity image">';
 
 if (empty($update)) {
